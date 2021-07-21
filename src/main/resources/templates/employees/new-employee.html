@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link th:href="@{/new-employee.css}" rel="stylesheet">
+  </head>
+  <body>
+  
+  <nav th:replace="layouts :: navbar"></nav>
+  
+	<div class="container">
+	
+		<form action="/employees/save" method="POST" th:object="${employee}">
+			<input type="text" placeholder="First Name" th:field="${employee.firstName}"/>
+			<br><br>
+			
+			<input type="text" placeholder="Last Name" th:field="${employee.lastName}"/>
+			<br><br>
+			
+			
+			<input type="text" placeholder="Email" th:field="${employee.email}"/>
+			<br><br>
+			
+			<button type="submit">Resister Employee</button>
+		</form>
+	</div>
+  </body>
+</html>

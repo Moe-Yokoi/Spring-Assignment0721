@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body{
+	margin:0
+}
+
+.container{
+	text-align:center;
+	margin-top:10%;
+	margin-right:auto;
+	margin-left:auto;
+	background-color:#cccccc;
+	width:30%;
+	padding-top:30px;
+	padding-bottom:30px;
+	
+	
+}
+
