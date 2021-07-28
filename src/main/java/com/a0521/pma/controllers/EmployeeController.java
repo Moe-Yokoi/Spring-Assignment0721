@@ -17,28 +17,26 @@ import com.a0521.pma.entity.Employee;
 public class EmployeeController {
 	
 	@Autowired
-	EmployeeRepository emRepo;
-
+	EmployeeRepository empRepo;
+	
 	@GetMapping
 	public String displayEmployees(Model model) {
-		List<Employee> employees = emRepo.findAll();
+		List<Employee> employees = empRepo.findAll();
 		model.addAttribute("employeeList", employees);
 		return "employees/list-employees";
 	}
 	
-//	@RequestMapping("/new")
 	@GetMapping("/new")
 	public String displayEmployeeForm(Model model) {
-		model.addAttribute("employee", new Employee());
+		model.addAttribute("employee",  new Employee());
 		return "employees/new-employee";
 	}
 	
-//	@RequestMapping(value="/save", method = RequestMethod.POST)
 	@PostMapping("/save")
-	public String createEmployee(Employee employee, Model model) {
-		//this should handle saving to the database
-		emRepo.save(employee);
-		
-		return "redirect:/";
+	public String createEmployee(Employee employee) {
+		empRepo.save(employee);
+		return "redirect:/employees"; // ---> domain.com/employees
 	}
+	
 }
+

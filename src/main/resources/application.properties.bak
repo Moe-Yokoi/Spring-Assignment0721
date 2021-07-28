@@ -1,6 +1,13 @@
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+spring.jpa.show-sql=true
+spring.thymeleaf.cache=false
+
+
+
 spring.datasource.url=jdbc:postgresql://localhost:5432/pma-springbootdb
 spring.datasource.username=postgres
-spring.datasource.password=10m1167a
+spring.datasource.password=password321
 
 spring.sql.init.mode=never
 spring.jpa.hibernate.ddl-auto=none
@@ -8,4 +15,3 @@ spring.jpa.properties.hibernate.jdbc.log.non_contextual_creation=true
 
 spring.jpa.show-sql=true
 spring.thymeleaf.cache=false
-version=${versionNum}
