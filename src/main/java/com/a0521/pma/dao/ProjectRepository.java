@@ -16,5 +16,6 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
 	@Query(nativeQuery = true, value="SELECT stage as label, COUNT(*) as value "
 			+ "FROM project "
 			+ "GROUP BY stage")
+	
 	public List<ChartData> getProjectStatus();
 }

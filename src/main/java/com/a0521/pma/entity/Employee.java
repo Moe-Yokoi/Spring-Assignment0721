@@ -17,8 +17,8 @@ import javax.persistence.SequenceGenerator;
 public class Employee {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@SequenceGenerator(name= "employee_seq")
 	private long employeeId;
 	
